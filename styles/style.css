@@ -23,7 +23,7 @@
   font-family: var(--main-font);
   font-variation-settings: 'wght' var(--main-font-weight), 'wdth' 100, 'opsz' 0;
   background-color: var(--background-color);
-  color: var(--accent-color); 
+  color: var(--accent-color);
   background-image: var(--background-image);
   background-size: 4px;
   background-repeat: repeat;
@@ -71,7 +71,7 @@
 }
 
 .theme-menu__button {
-  position: relative; 
+  position: relative;
   text-transform: uppercase;
   background-color: transparent;
   font-size: 14px;
