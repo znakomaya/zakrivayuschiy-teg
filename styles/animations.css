@@ -80,6 +80,10 @@
       scale: 1.5;
     }
   }
+
+  .card__icon-button .sparks {
+    opacity: 0;
+  }
   
   .like-icon.is-liked .sparks {
     fill: var(--heart-fill-color);
