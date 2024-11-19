@@ -21,14 +21,11 @@
   align-items: center;
   font-family: var(--main-font);
   font-variation-settings: 'wght' var(--main-font-weight), 'wdth' 100, 'opsz' 0;
-  background-color: var(--background-color);
   color: var(--accent-color);
-  background-image: 
-    repeating-linear-gradient(to right, var(--gradient-vertical, #d3d3d3) 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom, var(--gradient-horizontal-first, #e7e7e7) 0px 2px, var(--gradient-horizontal-second, #1a1a1a) 2px 4px);
+  background-color: var(--background-color);
+  background-image: var(--gradient);
+  background-position: center;
   background-size: cover;
-  background-size: 4px;
-  background-repeat: repeat;
   background-attachment: fixed;
 }
 
