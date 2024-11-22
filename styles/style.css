@@ -108,7 +108,6 @@
 .theme-menu__button:focus-visible::after {
   inline-size: 100%;
   transform: scaleX(1);
-  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:disabled::before {
@@ -179,39 +178,51 @@
   object-position: 95% 0;
 }
 
-.interest {
+.filter-saturate {
   filter: saturate(200%);
 }
 
-.confidence {
+.filter-hue-rotate {
   filter: hue-rotate(120deg);
 }
 
 .hooray {
   object-position: 50% 0;
+}
+
+.filter-blur {
   filter: blur(0.2rem);
 }
 
 .well {
   object-position: 70% 0;
+}
+
+.filter-invert {
   filter: invert(1);
 }
 
-.tired {
+.filter-grayscale {
   filter: grayscale(1);
 }
 
 .upside-down {
   object-position: 0 70%;
+}
+
+.filter-sepia-bright-contrast {
   filter: sepia(80%) brightness(80%) contrast(120%);;
 }
 
 .no-way {
   object-position: 50% 0;
+}
+
+.filter-brightness {
   filter: brightness(140%);
 }
 
-.wow {
+.filter-bright-contrast {
   filter: brightness(130%) contrast(120%);
 }
 
@@ -269,6 +280,8 @@
 .footer_save-button {
   display: grid;
   justify-content: center;
+  align-content: center;
+  margin-top: -48px;
 }
 
 .card__save-button {
@@ -293,6 +306,7 @@
 .button:hover {
   color: var(--background-color);
   transition: color 1s ease;
+  cursor: pointer;
 }
 
 .button:hover::after {
@@ -303,27 +317,20 @@
   box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
+.button:focus {
+  outline: none;
+}
+
 .card__icon-button {
   background-color: transparent;
   border: 2px solid transparent;
   padding: 0;
   transition: border 0.3s ease;
+  block-size: 37px;
 }
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-}
-
-.card__icon-button:hover,
-.card__like-button:hover,
-.card__save-button:hover {
-  cursor: pointer;
-}
-
-.card__icon-button:focus,
-.card__like-button:focus,
-.card__save-button:focus {
-  outline: none;
 }
 
 @supports (font-variation-settings: normal) {
@@ -362,7 +369,7 @@ dialog::backdrop {
   grid-template-rows: min-content min-content;
   column-gap: 20px;
   row-gap: 30px;
-  padding: 30px;
+  padding: 15px;
   background-color: var(--background-color);
 }
 
@@ -370,21 +377,17 @@ dialog::backdrop {
   grid-column: 1 / 3;
   inline-size: 100%;
   padding-block: 7px;
+  background-color: var(--background-color);
 }
 
 .dialog_text {
-  position: relative;
-  z-index: 1;
   line-height: 1.5;
   text-transform: uppercase;
   grid-column: 2 / 3;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  color: var(--button-text);
-  mix-blend-mode: difference;
 }
 
 .dialog_floppy {
   inline-size: 100%;
   block-size: 100%;
+  color: var(--accent-color);
 }
