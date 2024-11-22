@@ -33,6 +33,7 @@
 
   .like-icon:active .core {
     fill: var(--heart-fill-color);
+    transition: fill 0.3s linear;
   }
   
   .like-icon .main-body {
